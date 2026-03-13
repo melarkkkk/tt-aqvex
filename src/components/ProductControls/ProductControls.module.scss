@@ -1,0 +1,125 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+.controls {
+  @include grid-columns;
+  padding-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.search {
+  align-self: flex-end;
+  position: relative;
+  width: 420px;
+}
+
+.searchInput {
+  width: 100%;
+  height: 40px;
+
+  padding-left: 48px;
+  padding-right: 16px;
+
+  border: none;
+  border-radius: 12px;
+
+  background: $bg-gray;
+
+  font-size: 1rem;
+  color: #2c3a4b;
+
+  outline: none;
+}
+
+.searchInput::placeholder {
+  color: $text-primary;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  width: 20px;
+  height: 20px;
+
+  background: url("./icons/search.svg") center / contain no-repeat;
+}
+
+.topSection {
+  display: flex;
+  justify-content: space-between;
+}
+
+.items {
+  color: $text-secondary;
+  line-height: 100%;
+}
+
+.sort {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  position: relative;
+
+  border: none;
+  background: transparent;
+
+  font-size: 1rem;
+  color: $text-primary;
+
+  cursor: pointer;
+}
+
+.sortIcon {
+  width: 16px;
+  height: 16px;
+
+  background: url("./icons/sort.svg") center / contain no-repeat;
+  transition: transform 0.8s ease;
+}
+
+.sortLabel {
+  width: 150px;
+  text-align: left;
+  flex: 1;
+}
+
+.dropdownToggle {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+.arrow {
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-color: $text-secondary;
+
+  mask-image: url("./icons/arrow-down.svg");
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+
+  -webkit-mask-image: url("./icons/arrow-down.svg");
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: contain;
+
+  transition: transform 0.3s ease;
+}
+
+.open,
+.reversed {
+  transform: rotate(180deg);
+}

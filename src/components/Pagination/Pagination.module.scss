@@ -1,0 +1,35 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+.pagination {
+  @include grid-columns;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 1rem;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 1rem; 
+
+  button {
+    padding: 0.5rem 0.8rem;
+    height: 2rem;
+    width: 2rem; 
+    cursor: pointer;
+
+    &.active {
+      border: 2px solid $accent-blue; 
+      border-radius: 1em;
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    @include on-tablet {
+      height: 46px;
+      width: 46px;
+    }
+  }
+}

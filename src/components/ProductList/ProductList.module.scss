@@ -1,0 +1,20 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+.productList {
+  @include grid-columns;
+  @include grid-container($padding-mobile: 0, $padding-tablet: 0);
+
+
+  padding-top: 1.5rem;
+
+  width: 100%;
+
+  & > * {
+    @include grid-columns($cols-mobile: 4, $cols-tablet: 3, $cols-desktop: 3);
+  }
+
+  &__item {
+    font-size: 2rem;
+  }
+}

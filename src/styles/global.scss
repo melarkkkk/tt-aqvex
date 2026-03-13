@@ -1,0 +1,18 @@
+@import "./normalize";
+@import "./variables";
+@import "./mixins";
+
+@font-face {
+  font-family: "Klein";
+  src: url("../fonts/Klein-Text-Book-trial.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  // trial version doesn't show any numbers
+  // font-family: 'Klein', Arial, sans-serif;
+  font-family: Arial, sans-serif;
+  font-weight: 500;
+  font-style: Medium;
+}

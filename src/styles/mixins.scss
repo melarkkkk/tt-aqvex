@@ -1,0 +1,49 @@
+@mixin on-tablet {
+  @media (min-width: $breakpoint-tablet) {
+    @content;
+  }
+}
+
+@mixin on-desktop {
+  @media (min-width: $breakpoint-desktop) {
+    @content;
+  }
+}
+
+@mixin grid-container(
+  $columns-mobile: 4,
+  $columns-tablet: 6,
+  $columns-desktop: 12,
+  $gap: 20px,
+  $padding-mobile: 16px,
+  $padding-tablet: 24px
+) {
+  display: grid;
+  gap: $gap;
+  margin: 0;
+  grid-template-columns: repeat($columns-mobile, minmax(0, 1fr));
+  padding-inline: $padding-mobile;
+  align-items: stretch;
+
+  @include on-tablet {
+    grid-template-columns: repeat($columns-tablet, minmax(0, 1fr));
+    padding-inline: $padding-tablet;
+  }
+
+  @include on-desktop {
+    grid-template-columns: repeat($columns-desktop, minmax(0, 112px));
+    justify-content: center;
+  }
+}
+
+@mixin grid-columns($cols-mobile: 4, $cols-tablet: 6, $cols-desktop: 12) {
+  grid-column: span $cols-mobile;
+
+  @include on-tablet {
+    grid-column: span $cols-tablet;
+  }
+
+  @include on-desktop {
+    grid-column: span $cols-desktop;
+  }
+}

@@ -1,0 +1,7 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.page {
+  padding-bottom: 2rem;
+  @include grid-container;
+}

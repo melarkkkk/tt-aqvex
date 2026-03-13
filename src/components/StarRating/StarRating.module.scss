@@ -1,0 +1,13 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+.stars {
+  display: flex;
+  align-items: center;
+  gap: 0.125rem;
+  color: $accent-blue;
+}
+
+.star {
+  font-size: 1rem;
+}
