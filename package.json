@@ -1,13 +1,16 @@
 {
   "name": "axvex_layout-tt",
+  "homepage": "https://melarkkkk.github.io/tt-aqvex",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "scripts": {
+ "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "normalize-scss": "^8.0.0",
