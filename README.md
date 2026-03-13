@@ -2,6 +2,10 @@
 
 This is a React + TypeScript + Vite project that displays a list of products fetched from a remote API. It includes search by name, sorting by popularity or price, reversing order, and pagination with responsive behavior.
 
+## Demo Link
+
+[Aqvex Page](https://melarkkkk.github.io/tt-aqvex)
+
 ## Features
 
 - Fetch products from API and handle loading/errors
