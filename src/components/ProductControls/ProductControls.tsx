@@ -30,7 +30,6 @@ export const ProductControls: React.FC<Props> = ({
   ];
 
   const toggleDropdown = () => setDropdownOpen((prev) => !prev);
-  console.log(dropdownOpen);
 
   const handleSortChange = (newSort: typeof sortBy) => {
     onSortBy(newSort);

@@ -162,11 +162,11 @@
 }
 
 .iconSuccess {
-  background-image: url("./icons/success.svg");
+  background-image: url("/icons/success.svg");
 }
 
 .iconCategory {
-  background-image: url("./icons/category.svg");
+  background-image: url("/icons/category.svg");
 }
 
 .productReviews {
@@ -210,7 +210,7 @@
   width: 26px;
   height: 26px;
 
-  background-image: url("./icons/cart.svg");
+  background-image: url("/icons/cart.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -254,12 +254,12 @@
   height: 10px;
   background-color: $text-secondary;
 
-  mask-image: url("./icons/arrow-down.svg");
+  mask-image: url("/icons/arrow-down.svg");
   mask-repeat: no-repeat;
   mask-position: center;
   mask-size: contain;
 
-  -webkit-mask-image: url("./icons/arrow-down.svg");
+  -webkit-mask-image: url("/icons/arrow-down.svg");
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-position: center;
   -webkit-mask-size: contain;

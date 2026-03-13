@@ -47,7 +47,7 @@
   width: 20px;
   height: 20px;
 
-  background: url("./icons/search.svg") center / contain no-repeat;
+  background: url("/icons/search.svg") center / contain no-repeat;
 }
 
 .topSection {
@@ -80,7 +80,7 @@
   width: 16px;
   height: 16px;
 
-  background: url("./icons/sort.svg") center / contain no-repeat;
+  background: url("/icons/sort.svg") center / contain no-repeat;
   transition: transform 0.8s ease;
 }
 
@@ -106,12 +106,12 @@
   height: 10px;
   background-color: $text-secondary;
 
-  mask-image: url("./icons/arrow-down.svg");
+  mask-image: url("/icons/arrow-down.svg");
   mask-repeat: no-repeat;
   mask-position: center;
   mask-size: contain;
 
-  -webkit-mask-image: url("./icons/arrow-down.svg");
+  -webkit-mask-image: url("/icons/arrow-down.svg");
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-position: center;
   -webkit-mask-size: contain;
