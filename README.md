@@ -33,6 +33,7 @@ Product images are also unavailable in the demo because the original API respons
 - Simple state management via `useState`
 
 ## File Structure
+```bash
 src/
 ├─ App.tsx
 ├─ components/
@@ -41,6 +42,8 @@ src/
 │ ├─ SortDropdown, StarRating
 ├─ styles/ (global.scss, mixins, variables)
 ├─ types/Product.ts
+```
+
 
 
 ## How to Run
