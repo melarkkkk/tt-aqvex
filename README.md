@@ -15,6 +15,15 @@ This is a React + TypeScript + Vite project that displays a list of products fet
 - Responsive layout
 - Modular component structure with SCSS modules
 
+## Notes
+
+The original implementation fetched products from a remote API.  
+However, the API does not allow cross-origin requests from GitHub Pages due to CORS restrictions.
+
+Because of this, the deployed demo uses a **local `products.json` dataset** instead of a live API request.
+
+Product images are also unavailable in the demo because the original API response references image resources that are not publicly accessible.
+
 ## Tech Stack
 
 - **React** + **TypeScript**

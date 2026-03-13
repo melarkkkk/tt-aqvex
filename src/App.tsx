@@ -1,5 +1,3 @@
-// import s from './App.module.scss';
-// import { Header } from './components/Header';
 import { useEffect, useState } from "react";
 import type { Product } from "./types/Product";
 import { Header } from "./components/Header";
@@ -8,27 +6,26 @@ import { ProductList } from "./components/ProductList";
 import { ProductControls } from "./components/ProductControls";
 import { Pagination } from "./components/Pagination/Pagination";
 import { Footer } from "./components/Footer/Footer";
-const endpoint =
-  "https://corsproxy.io/?https://ip-194-99-21-145-139178.vps.hosted-by-mvps.net/api/v1/products";
+import productsData from "./data/products.json";
+
+// const ENDPOINT =
+//   "https://ip-194-99-21-145-139178.vps.hosted-by-mvps.net/api/v1/products";
 
 function App() {
-  const [products, setProducts] = useState<Product[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [errors, setErrors] = useState<string[]>([]);
+  const [products] = useState<Product[]>(productsData.data.products);
   const [search, setSearch] = useState("");
   const [sortBy, setSortBy] = useState<string>("popularity");
   const [reversed, setReversed] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage, setItemsPerPage] = useState(12);
-  
 
-  useEffect(() => {
-    fetch(endpoint)
-      .then((res) => res.json())
-      .then((data) => setProducts(data.data.products))
-      .catch(() => setErrors((prev) => [...prev, "Failed loading products"]))
-      .finally(() => setIsLoading(false));
-  }, []);
+  // useEffect(() => {
+  //   fetch(ENDPOINT)
+  //     .then((res) => res.json())
+  //     .then((data) => setProducts(data.data.products))
+  //     .catch(() => setErrors((prev) => [...prev, "Failed loading products"]))
+  //     .finally(() => setIsLoading(false));
+  // }, []);
 
   useEffect(() => {
     const updateItemsPerPage = () => {
@@ -74,16 +71,12 @@ function App() {
           reversed={reversed}
           onReversed={setReversed}
         />
-        {!isLoading && !errors.length && (
-          <>
-            <ProductList products={paginatedProducts} />
-            <Pagination
-              totalPages={totalPages}
-              currentPage={currentPage}
-              onChangePage={setCurrentPage}
-            />
-          </>
-        )}
+        <ProductList products={paginatedProducts} />
+        <Pagination
+          totalPages={totalPages}
+          currentPage={currentPage}
+          onChangePage={setCurrentPage}
+        />
       </Page>
       <Footer />
     </>
