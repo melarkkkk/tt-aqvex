@@ -9,7 +9,7 @@ import { ProductControls } from "./components/ProductControls";
 import { Pagination } from "./components/Pagination/Pagination";
 import { Footer } from "./components/Footer/Footer";
 const endpoint =
-  "https://ip-194-99-21-145-139178.vps.hosted-by-mvps.net/api/v1/products";
+  "https://corsproxy.io/?https://ip-194-99-21-145-139178.vps.hosted-by-mvps.net/api/v1/products";
 
 function App() {
   const [products, setProducts] = useState<Product[]>([]);
